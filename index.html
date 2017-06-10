@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>National Parks</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style type="text/css">
+      html { 
+	      height: 100%;
+	  }
+      
+	  body {
+		  height: 100%; 
+		  margin: 0; 
+		  padding: 0;
+		  background-color: #97d3ea;
+	  }
+      
+	  /*Adapt the following styling depending on where you want to put your map. If you want a 'full screen' map, then set the width and height to 100 percent and remove the margins.*/
+	  #Np-map { 
+	  	  height: 80%;
+		  width: 70%; 
+		  margin-left: auto;
+          margin-right: auto;
+          border-style: solid;
+    	  border-color: #ffffff;
+	  
+	  .pop_up_box_text {
+	 	  font-family: Georgia, 'Times New Roman', Times, serif; 
+		  font-size: 16px; 
+		  line-height: 22px; 
+		  color: #ffffff; 
+		  display: inline; 
+	  }
+
+	  .my-pictures {
+	  	width:50px;
+	  	height:50px;
+	  	padd
+	  	background: pink;
+	  }
+
+	</style>
+
+
+
+</head>
+
+<body> 
+
+    
+
+	<div class="my-pictures" style="width:50px;
+		height:50px;
+	 	padding: 0 20px;
+	  	background: pink;"> My Pictures </div>
+
+	 <!-- <div class="Np-pictures" style="width:50px;
+		height:50px;
+	 	padding: 0 20px;
+	  	background: green;"> National Park </div> -->
+
+<!-- 	  	this button does not work becasue not everyone on Flickr adds a geotag to their image
+ -->
+
+
+
+ 
+    <div id="Np-map"></div>   
+
+
+
+
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqIMX_kU0vkW_-QfNLbGJ6qm14zrnOwic&sensor&callback=GoogleApi.init"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+
+
+</html>

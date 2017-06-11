@@ -65,7 +65,7 @@ var FlickrApi = (function(){
 
 	function ajaxCall() {
 
-		var url = "https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=d3f3d8de69b56fb180270e35cdc2c2f8&user_id=150288100%40N04&has_geo=1&extras=geo&format=json&nojsoncallback=?"
+		var url = "https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=db420be9eae61a145ac37b5b0e67bb26&user_id=150288100%40N04&has_geo=1&extras=geo&format=json&nojsoncallback=?"
 			$.ajax({
 				url: url,
 				method: 'GET',
@@ -76,21 +76,22 @@ var FlickrApi = (function(){
 			})
 	};
 
-	function ajaxCallNp() {
-		var url = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=d3f3d8de69b56fb180270e35cdc2c2f8&tags=usnationalparks&format=json&nojsoncallback=?"
-			$.ajax({
-				url: url,
-				method: 'GET',
-			})
-			.done(populate)
-			.fail(function(){
+	// function ajaxCallNp() {
+	// 	var url = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=d3f3d8de69b56fb180270e35cdc2c2f8&tags=usnationalparks&format=json&nojsoncallback=?"
+	// 		$.ajax({
+	// 			url: url,
+	// 			method: 'GET',
+	// 		})
+	// 		.done(populate)
+	// 		.fail(function(){
 				
-			})
+	// 		})
 
-	};
+	// };
 
 
 	function populate(results) {
+		console.log(results);
 		var items = results.photos.photo;
 		for (var i = 0; i < items.length; i++) {
 			var item = items[i];
@@ -110,7 +111,7 @@ var FlickrApi = (function(){
 	}
 	var shared = {
 		ajaxCall: ajaxCall,
-		ajaxCallNp: ajaxCallNp
+		// ajaxCallNp: ajaxCallNp
 	}
 	return shared
 
@@ -123,10 +124,10 @@ var FlickrApi = (function(){
 
  });
 
- $('.Np-pictures').on('click',function(){
- 		FlickrApi.ajaxCallNp();
+ // $('.Np-pictures').on('click',function(){
+ // 		FlickrApi.ajaxCallNp();
 
- });
+ // });
 
 
 
